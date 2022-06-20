@@ -1,0 +1,30 @@
+teste
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   react/myp.rar
+#	new file:   react/myp/.gitignore
+#	new file:   react/myp/README.md
+#	new file:   react/myp/package-lock.json
+#	new file:   react/myp/package.json
+#	new file:   react/myp/public/index.html
+#	new file:   react/myp/public/manifest.json
+#	new file:   react/myp/public/robots.txt
+#	new file:   react/myp/src/App.js
+#	new file:   react/myp/src/components/Chart.js
+#	new file:   react/myp/src/components/Dashboard.js
+#	new file:   react/myp/src/components/Deposits.js
+#	new file:   react/myp/src/components/Main.js
+#	new file:   react/myp/src/components/Orders.js
+#	new file:   react/myp/src/components/StickyFooter.js
+#	new file:   react/myp/src/components/Title.js
+#	new file:   react/myp/src/components/listItens.js
+#	new file:   react/myp/src/index.css
+#	new file:   react/myp/src/index.js
+#	new file:   react/myp/src/pages/route.js
+#	new file:   react/myp/yarn.lock
+#!testetestettestetestetestetasdfQaqqaAeste
