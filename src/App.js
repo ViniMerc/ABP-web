@@ -1,29 +1,12 @@
 import * as React from "react";
 
-//import Tabela from './components/Tabela'
 import Login from './components/Login'
+import Cadastro from './components/Cadastro'
+import Tabela from './components/Tabela'
 
 export default function App() {
   return (
-   <Login/>
+   <Cadastro/>
   );
 }
-
-/*
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
-
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-            <Route path="/">
-              <Login />
-            </Route>
-            <Route path="/users">
-              <Tabela />
-            </Route>
-      </Routes>
-    </Router>
-  );
-}
- */
+ 

@@ -12,14 +12,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  /*const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
-  };
+  };*/
  
   return (
     <ThemeProvider theme={theme}>
@@ -33,11 +33,10 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" post='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -58,8 +57,6 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
-           
-
             <Button
               type="submit"
               fullWidth
@@ -68,10 +65,7 @@ export default function SignIn() {
             >
               Log in
             </Button>
-
             <Grid container>
-              <Grid item xs>
-              </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
                   {"Não possui conta? Cadastre-se"}

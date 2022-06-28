@@ -12,14 +12,15 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+
+  /*const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
-  };
+  };*/
 
   return (
     <ThemeProvider theme={theme}>
@@ -36,7 +37,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Cadastro
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate post='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
