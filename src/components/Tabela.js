@@ -23,7 +23,7 @@ function createData(name, entrada, saida) {
   }
 
   var rows = [
-    createData('Vinicius', 13, 6)
+    createData('Vinicius', "08:00","18:00")
   ];
 
 export default function SignIn() {

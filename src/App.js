@@ -1,14 +1,29 @@
-//import Login from './components/Login'
-//import Cadastro from './components/Cadastro'
+import * as React from "react";
 
-import Teste from './components/Teste'
+//import Tabela from './components/Tabela'
+import Login from './components/Login'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Teste />
-    </div>
+   <Login/>
   );
 }
 
-export default App;
+/*
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+            <Route path="/">
+              <Login />
+            </Route>
+            <Route path="/users">
+              <Tabela />
+            </Route>
+      </Routes>
+    </Router>
+  );
+}
+ */
