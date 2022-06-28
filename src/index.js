@@ -10,6 +10,7 @@ root.render(
   </React.StrictMode>
 );
 
+/*
 
 const functions = require('firebase-functions');
 const admin = require("firebase-admin");
@@ -97,3 +98,4 @@ app.get("/pontos", function (request, response){
 exports.api = functions.https.onRequest(app);
 
 
+ */

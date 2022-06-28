@@ -1,9 +1,11 @@
-import Main from './components/Main'
+//import Login from './components/Login'
+
+import Cadastro from './components/Cadastro'
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Cadastro />
     </div>
   );
 }
