@@ -22,9 +22,8 @@ function createData(name, entrada, saida) {
     return { name, entrada, saida};
   }
 
-  const rows = [
-    createData('Vinicius', 13, 6),
-    createData('Vinicius', 19, 6)
+  var rows = [
+    createData('Vinicius', 13, 6)
   ];
 
 export default function SignIn() {
