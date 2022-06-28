@@ -8,21 +8,15 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Login from './Login'
 
 const theme = createTheme();
 
 export default function SignUp() {
-
-  /*const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };*/
-
-  return (
+  const[visivel, setVisivel] = React.useState(true);
+  return (<>
+    {!visivel && <Login/>}
+    {visivel &&
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -37,7 +31,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Cadastro
           </Typography>
-          <Box component="form" noValidate post='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' sx={{ mt: 3 }}>
+          <Box component="form" noValidate action='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' method='POST' sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -92,7 +86,9 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" 
+                // eslint-disable-next-line react/jsx-no-undef
+                onClick={() => {setVisivel(x => !x)}}>
                   Já possui conta? Log in
                 </Link>
               </Grid>
@@ -101,5 +97,5 @@ export default function SignUp() {
         </Box>
       </Container>
     </ThemeProvider>
-  );
+}</>);
 }

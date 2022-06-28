@@ -8,20 +8,15 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Tabela from './Tabela';
 
 const theme = createTheme();
 
 export default function SignIn() {
-  /*const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };*/
- 
-  return (
+ const[visivel, setVisivel] = React.useState(true);
+  return (<>
+    {!visivel && <Tabela/>}
+    {visivel &&
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -36,7 +31,7 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
-          <Box component="form" action='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' method='GET' noValidate sx={{ mt: 1 }}>
+          <Box component="form" action='https://us-central1-sis-web-7d13b.cloudfunctions.net/api/login' method='POST' noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -51,10 +46,10 @@ export default function SignIn() {
               margin="normal"
               required
               fullWidth
-              name="password"
+              name="senha"
               label="Senha"
               type="password"
-              id="password"
+              id="senha"
               autoComplete="current-password"
             />
             <Button
@@ -62,6 +57,8 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              // eslint-disable-next-line react/jsx-no-undef
+              onClick={() => {setVisivel(x => !x)}}
             >
               Log in
             </Button>
@@ -75,6 +72,6 @@ export default function SignIn() {
           </Box>
         </Box>
       </Container>
-    </ThemeProvider>
-  );
+    </ThemeProvider>}
+    </> );
 }
