@@ -36,7 +36,7 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
-          <Box component="form" post='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' noValidate sx={{ mt: 1 }}>
+          <Box component="form" action='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' method='GET' noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
