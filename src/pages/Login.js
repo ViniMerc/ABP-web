@@ -10,10 +10,12 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Tabela from './Tabela';
 import { lightGreen } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: lightGreen,
+    secondary: grey,
   },
 });
 
@@ -69,7 +71,7 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" color="secondary"> 
                   {"Não possui conta? Cadastre-se"}
                 </Link>
               </Grid>

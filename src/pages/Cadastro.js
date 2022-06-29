@@ -10,10 +10,12 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Login from './Login';
 import { lightGreen } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: lightGreen,
+    secondary: grey,
   },
 });
 
@@ -91,7 +93,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" 
+                <Link href="#" variant="body2" color="secondary"
                 // eslint-disable-next-line react/jsx-no-undef
                 onClick={() => {setVisivel(x => !x)}}>
                   Já possui conta? Log in

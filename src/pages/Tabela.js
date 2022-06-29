@@ -17,6 +17,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import { lightGreen } from '@mui/material/colors';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const theme = createTheme({
   palette: {
@@ -25,12 +26,12 @@ const theme = createTheme({
   },
 });
 
-function createData(name, entrada, saida) {
-    return { name, entrada, saida};
+function createData(name, entrada, saida, deletar) {
+    return { name, entrada, saida, deletar};
   }
 
   var rows = [
-    createData('Vinicius', "08:00","18:00")
+    createData('Vinicius', "08:00","18:00", <DeleteIcon />)
   ];
 
 export default function SignIn() {
@@ -70,6 +71,7 @@ export default function SignIn() {
                    <TableCell>Nome</TableCell>
                    <TableCell align="left">Entrada</TableCell>
                    <TableCell align="left">Saida</TableCell>
+                   <TableCell>Deletar</TableCell>
                  </TableRow>
               </TableHead>
               <TableBody>
@@ -83,6 +85,7 @@ export default function SignIn() {
                       </TableCell>
                       <TableCell align="left">{row.entrada}</TableCell>
                       <TableCell align="left">{row.saida}</TableCell>
+                      <TableCell align="left">{row.deletar}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
