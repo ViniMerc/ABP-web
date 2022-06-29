@@ -9,8 +9,13 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Tabela from './Tabela';
+import green from '@material-ui/core/colors/green';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: green,
+  },
+});
 
 export default function SignIn() {
  const[visivel, setVisivel] = React.useState(true);

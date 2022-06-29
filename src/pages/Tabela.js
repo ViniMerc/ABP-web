@@ -15,8 +15,15 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import green from '@material-ui/core/colors/green';
+import { blue } from '@mui/material/colors';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: green,
+    secondary: blue,
+  },
+});
 
 function createData(name, entrada, saida) {
     return { name, entrada, saida};

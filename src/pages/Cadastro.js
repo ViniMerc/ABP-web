@@ -9,15 +9,20 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Login from './Login'
+import green from '@material-ui/core/colors/green';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: green,
+  },
+});
 
 export default function SignUp() {
   const[visivel, setVisivel] = React.useState(true);
   return (<>
     {!visivel && <Login/>}
     {visivel &&
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} color="primary">
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box  bgcolor= "#f1f1f1" borderRadius={5} padding={4}

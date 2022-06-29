@@ -6,8 +6,14 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Cadastro from './Cadastro'
+import '@fontsource/roboto/400.css';
+import green from '@material-ui/core/colors/green';
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: green,
+  },
+});
 
 export default function HomePage() {
   const[visivel, setVisivel] = React.useState(true);
@@ -38,7 +44,8 @@ export default function HomePage() {
             >Log in</Button>
           </Box>
           <Box component="form" noValidate sx={{ mt: 1 }}>
-            <Button
+            <Button 
+              color="primary"
               type="submit"
               fullWidth
               variant="contained"
