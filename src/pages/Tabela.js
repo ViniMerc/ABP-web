@@ -26,24 +26,14 @@ const theme = createTheme({
   },
 });
 
-function createData(name, entrada, saida, deletar) {
-    return { name, entrada, saida, deletar};
+function createData(name, entrada, deletar) {
+    return { name, entrada, deletar};
   }
-
   var rows = [
-    createData('Vinicius', "08:00","18:00", <DeleteIcon />)
+    createData('Vinicius', "08:00", <DeleteIcon />)
   ];
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -54,23 +44,18 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',}}>
-
           <Typography component="h1" variant="h5">
             Dashboard
           </Typography>
-          
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             V
           </Avatar>
-        
-          <TableContainer component={Paper}>
-            
+          <TableContainer component={Paper}>       
             <Table sx={{ minWidth: 150 }} size="small" aria-label="a dense table">
               <TableHead>
                  <TableRow>
                    <TableCell>Nome</TableCell>
                    <TableCell align="left">Entrada</TableCell>
-                   <TableCell align="left">Saida</TableCell>
                    <TableCell>Deletar</TableCell>
                  </TableRow>
               </TableHead>
@@ -84,7 +69,6 @@ export default function SignIn() {
                         {row.name}
                       </TableCell>
                       <TableCell align="left">{row.entrada}</TableCell>
-                      <TableCell align="left">{row.saida}</TableCell>
                       <TableCell align="left">{row.deletar}</TableCell>
                     </TableRow>
                   ))}
@@ -92,14 +76,13 @@ export default function SignIn() {
               </Table>
           </TableContainer>
 
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>              
+          <Box component="form" noValidate sx={{ mt: 1 }}>              
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}> Marcar ponto </Button>
+              sx={{ mt: 3, mb: 2 }}> Marcar entrada </Button>
           </Box>
-
         </Box>
       </Container>
     </ThemeProvider>
