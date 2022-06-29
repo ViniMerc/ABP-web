@@ -15,12 +15,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import green from '@material-ui/core/colors/green';
 import { blue } from '@mui/material/colors';
+import { lightGreen } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
-    primary: green,
+    primary: lightGreen,
     secondary: blue,
   },
 });

@@ -7,11 +7,11 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Cadastro from './Cadastro';
 import '@fontsource/roboto/400.css';
-import green from '@material-ui/core/colors/green';
+import { lightGreen } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
-    primary: green,
+    primary: lightGreen,
   },
 });
 
