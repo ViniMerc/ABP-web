@@ -9,11 +9,11 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Tabela from './Tabela';
-import green from '@material-ui/core/colors/green';
+import { lightGreen } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
-    primary: green,
+    primary: lightGreen,
   },
 });
 
