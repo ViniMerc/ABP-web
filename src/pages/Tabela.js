@@ -56,6 +56,7 @@ export default function SignIn() {
           </Avatar>
         
           <TableContainer component={Paper}>
+            
             <Table sx={{ minWidth: 150 }} size="small" aria-label="a dense table">
               <TableHead>
                  <TableRow>
@@ -88,6 +89,7 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}> Marcar ponto </Button>
           </Box>
+
         </Box>
       </Container>
     </ThemeProvider>
