@@ -18,6 +18,7 @@ import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import { lightGreen } from '@mui/material/colors';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Home from './Home'
 
 const theme = createTheme({
   palette: {
@@ -34,7 +35,10 @@ function createData(name, entrada, deletar) {
   ];
 
 export default function SignIn() {
-  return (
+  const[visivel, setVisivel] = React.useState(true);
+  return (<>
+    {!visivel && <Home/>}
+    {visivel &&
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -82,8 +86,17 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}> Marcar entrada </Button>
           </Box>
+          <Box component="form" noValidate sx={{ mt: 1 }}>              
+          <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 1, mb: 2 }}
+              // eslint-disable-next-line react/jsx-no-undef
+              onClick={() => {setVisivel(x => !x)}}> Voltar para página inicial </Button>
+          </Box>
         </Box>
       </Container>
     </ThemeProvider>
-  );
+  }</>);
 }
