@@ -5,7 +5,6 @@ const app = require("express")();
 admin.initializeApp();
 const dbUsuarios = admin.firestore().collection("Usuarios");
 
-
 app.get("/usuarios", function (request, response) {
   dbUsuarios.get().then(function (docs) {
         let usuarios = [];
