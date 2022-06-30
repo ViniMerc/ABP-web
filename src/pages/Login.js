@@ -71,8 +71,10 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item>
-                <Link href="#" variant="body2" color="secondary"> 
-                  {"Não possui conta? Cadastre-se"}
+                <Link href="#" variant="body2" color="secondary"
+                // eslint-disable-next-line react/jsx-no-undef
+                onClick={() => {setVisivel(x => !x)}}> 
+                {"Não possui conta? Cadastre-se"}
                 </Link>
               </Grid>
             </Grid>

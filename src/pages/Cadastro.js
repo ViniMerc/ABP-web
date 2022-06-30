@@ -88,9 +88,9 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-            >
-              Cadastre-se
-            </Button>
+              // eslint-disable-next-line react/jsx-no-undef
+              onClick={() => {setVisivel(x => !x)}}>
+              Cadastre-se</Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2" color="secondary"

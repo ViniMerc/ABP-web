@@ -41,6 +41,8 @@ export default function HomePage() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+               // eslint-disable-next-line react/jsx-no-undef
+               onClick={() => {setVisivel(x => !x)}}
             >Log in</Button>
           </Box>
           <Box component="form" noValidate sx={{ mt: 1 }}>
