@@ -24,7 +24,7 @@ export default function SignUp() {
   return (<>
     {!visivel && <Login/>}
     {visivel &&
-    <ThemeProvider theme={theme} color="primary">
+    <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box  bgcolor= "#f1f1f1" borderRadius={5} padding={4}
@@ -38,7 +38,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Cadastro
           </Typography>
-          <Box component="form" noValidate action='https://us-central1-sis-web-7d13b.cloudfunctions.net/api' method='POST' sx={{ mt: 3 }}>
+          <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
