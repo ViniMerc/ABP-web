@@ -36,6 +36,9 @@ export default function HomePage() {
           <Typography component="h1" variant="h5">
             Bem vindo ao ponto digital!
           </Typography>
+          <Typography component="h2" variant="h6" mt={3}>
+            Cadastre-se para usar o Ponto Web
+          </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
             <Button 
               color="primary"
