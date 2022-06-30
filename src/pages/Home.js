@@ -8,6 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Cadastro from './Cadastro';
 import '@fontsource/roboto/400.css';
 import { lightGreen } from '@mui/material/colors';
+import ParticlesBg from 'particles-bg'
 
 const theme = createTheme({
   palette: {
@@ -23,7 +24,8 @@ export default function HomePage() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
-        <Box bgcolor= "#f1f1f1" borderRadius={5} padding={4}
+        <ParticlesBg type="cobweb" bg={true} num={100}  color="#8bc34a" />
+        <Box bgcolor= "#f1f1f1" borderRadius={5} padding={4} boxShadow={2}
           sx={{
             marginTop: 8,
             display: 'flex',
@@ -34,7 +36,6 @@ export default function HomePage() {
           <Typography component="h1" variant="h5">
             Bem vindo ao ponto digital!
           </Typography>
-           
           <Box component="form" noValidate sx={{ mt: 1 }}>
             <Button
               type="submit"

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
+import ParticlesBg from 'particles-bg'
 //tabela
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -41,6 +42,7 @@ export default function SignIn() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        <ParticlesBg type="cobweb" bg={true} num={100}  color="#8bc34a" />
         <Box bgcolor= "#f1f1f1" borderRadius={5} padding={4}
           sx={{
             marginTop: 8,

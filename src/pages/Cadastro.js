@@ -11,6 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Login from './Login';
 import { lightGreen } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
+import ParticlesBg from 'particles-bg'
 
 const theme = createTheme({
   palette: {
@@ -27,6 +28,7 @@ export default function SignUp() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        <ParticlesBg type="cobweb" bg={true} num={100}  color="#8bc34a" />
         <Box  bgcolor= "#f1f1f1" borderRadius={5} padding={4}
           sx={{
             marginTop: 8,
