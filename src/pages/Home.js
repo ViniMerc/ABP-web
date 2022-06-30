@@ -37,16 +37,6 @@ export default function HomePage() {
             Bem vindo ao ponto digital!
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-               // eslint-disable-next-line react/jsx-no-undef
-               onClick={() => {setVisivel(x => !x)}}
-            >Log in</Button>
-          </Box>
-          <Box component="form" noValidate sx={{ mt: 1 }}>
             <Button 
               color="primary"
               type="submit"

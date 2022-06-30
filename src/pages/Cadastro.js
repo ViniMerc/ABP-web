@@ -2,7 +2,6 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -89,19 +88,17 @@ export default function SignUp() {
               type="submit"
               fullWidth
               variant="contained"
+              sx={{ mt: 3, mb: 2 }}>
+              Cadastre-se</Button>
+              
+              <Button
+              type="submit"
+              fullWidth
+              variant="contained"
               sx={{ mt: 3, mb: 2 }}
               // eslint-disable-next-line react/jsx-no-undef
               onClick={() => {setVisivel(x => !x)}}>
-              Cadastre-se</Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2" color="secondary"
-                // eslint-disable-next-line react/jsx-no-undef
-                onClick={() => {setVisivel(x => !x)}}>
-                  Já possui conta? Log in
-                </Link>
-              </Grid>
-            </Grid>
+              Já possui conta? Log in</Button>
           </Box>
         </Box>
       </Container>
