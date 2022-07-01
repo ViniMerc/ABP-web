@@ -66,7 +66,7 @@ export default function SignIn() {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <ParticlesBg type="cobweb" bg={true} num={100}  color="#8bc34a" />
-        <Box bgcolor= "#f1f1f1" borderRadius={5} padding={4}
+        <Box bgcolor= "#f1f1f1" borderRadius={5} padding={4} boxShadow={2}
           sx={{
             marginTop: 8,
             display: 'flex',
@@ -79,7 +79,7 @@ export default function SignIn() {
             V
           </Avatar>
 
-          <Box bgcolor= "#f1f1f1" boxShadow={0} component={Paper} className="App-header" >
+          <Box bgcolor= "#f1f1f1" boxShadow={0} component={Paper} className="App-header" padding={2}>
           <NewTaskInput onSubmit={addNewTask} />
 
           {tasks.map(({id, value}, index) => (
@@ -93,13 +93,6 @@ export default function SignIn() {
           </Box>
         
           <Box component="form" noValidate sx={{ mt: 1 }}>              
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}> Marcar entrada </Button>
-          </Box>
-          <Box component="form" noValidate sx={{ mt: 1 }}>              
           <Button
               type="submit"
               fullWidth
@@ -109,7 +102,6 @@ export default function SignIn() {
               onClick={() => {setVisivel(x => !x)}}> Voltar para página inicial </Button>
           </Box>
         </Box>
-
 
       </Container>
     </ThemeProvider>
