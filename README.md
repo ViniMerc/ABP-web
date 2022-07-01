@@ -9,7 +9,7 @@ O projeto consiste em desenvolver uma aplicação web de ponto eletrônico para 
 
 ## Features   
 
-- Telas Home, Login e Cadastro 
-- Marca horário de entrada e saída
+- Telas Home, Login, Cadastro e Dashboard de horários
+- Marca e exclui horários de entrada
 
 Você pode conferir o projeto em : [Hospedagem Heroku](https://testewebsatc.herokuapp.com/)
