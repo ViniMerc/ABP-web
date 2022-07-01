@@ -6,18 +6,10 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
-import ParticlesBg from 'particles-bg'
-//tabela
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import ParticlesBg from 'particles-bg';
 import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import { lightGreen } from '@mui/material/colors';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Home from './pages/Home'
 //Tabela add e exc
 import ListItem from './components/ListItem'
@@ -29,13 +21,6 @@ const theme = createTheme({
     secondary: blue,
   },
 });
-
-function createData(name, entrada, deletar) {
-    return { name, entrada, deletar};
-  }
-  var rows = [
-    createData('Vinicius', "08:00", <DeleteIcon />)
-  ];
 
 export default function SignIn() {
   const [tasks, setTasks] = useState([]);
@@ -72,12 +57,15 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',}}>
-          <Typography component="h1" variant="h5">
-            Dashboard
-          </Typography>
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             V
           </Avatar>
+          <Typography component="h1" variant="h5">
+            Dashboard
+          </Typography>
+          <Typography component="h2" variant="h6" mt={3}>
+            Cadastre seus horários de entrada
+          </Typography>
 
           <Box bgcolor= "#f1f1f1" boxShadow={0} component={Paper} className="App-header" padding={2}>
           <NewTaskInput onSubmit={addNewTask} />

@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
-const NewTaskInput = ({ onSubmit }) => {
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { lightGreen } from '@mui/material/colors';
 
+const theme = createTheme({
+  palette: {
+    primary: lightGreen,
+  },
+});
+
+const NewTaskInput = ({ onSubmit }) => {
   const [newItem, setNewItem] = useState('');
 
   function setNewTask({target}) {
@@ -13,19 +23,20 @@ const NewTaskInput = ({ onSubmit }) => {
   }
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
+    <Box>
       <form onSubmit={submit}>
         <input
+          type={"datetime-local"}
           className="Todo-input"
-          placeholder="Digite horário de entrada"
           onChange={setNewTask}
         /> 
-        <button type="submit">
+        <Button type="submit" variant="contained" size='small'>
           Adicionar
-        </button>
+        </Button>
       </form>
-    </div>
-  )
+    </Box>
+    </ThemeProvider>)
 };
 
 export default NewTaskInput;
