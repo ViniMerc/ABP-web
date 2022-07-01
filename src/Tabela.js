@@ -11,7 +11,6 @@ import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import { lightGreen } from '@mui/material/colors';
 import Home from './pages/Home'
-//Tabela add e exc
 import ListItem from './components/ListItem'
 import NewTaskInput from './components/NewTaskInput'
 
@@ -66,10 +65,8 @@ export default function SignIn() {
           <Typography component="h2" variant="h6" mt={3}>
             Cadastre seus horários de entrada
           </Typography>
-
           <Box bgcolor= "#f1f1f1" boxShadow={0} component={Paper} className="App-header" padding={2}>
           <NewTaskInput onSubmit={addNewTask} />
-
           {tasks.map(({id, value}, index) => (
           <ListItem
             key={id}
@@ -78,8 +75,7 @@ export default function SignIn() {
             onDelete={() => deleteTask(index)}
           />
           ))}
-          </Box>
-        
+          </Box>        
           <Box component="form" noValidate sx={{ mt: 1 }}>              
           <Button
               type="submit"
@@ -90,7 +86,6 @@ export default function SignIn() {
               onClick={() => {setVisivel(x => !x)}}> Voltar para página inicial </Button>
           </Box>
         </Box>
-
       </Container>
     </ThemeProvider>
   }</>);

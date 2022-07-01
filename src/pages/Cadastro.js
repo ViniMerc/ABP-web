@@ -84,13 +84,13 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button
+              <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}>
-              Cadastre-se</Button>
-              
+              Cadastre-se
+              </Button>             
               <Button
               type="submit"
               fullWidth
@@ -98,7 +98,8 @@ export default function SignUp() {
               sx={{ mt: 3, mb: 2 }}
               // eslint-disable-next-line react/jsx-no-undef
               onClick={() => {setVisivel(x => !x)}}>
-              Já possui conta? Log in</Button>
+              Já possui conta? Log in
+              </Button>
           </Box>
         </Box>
       </Container>

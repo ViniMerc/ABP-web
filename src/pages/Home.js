@@ -48,7 +48,8 @@ export default function HomePage() {
               sx={{ mt: 3, mb: 2 }}
               // eslint-disable-next-line react/jsx-no-undef
               onClick={() => {setVisivel(x => !x)}}
-            >Cadastro</Button>
+            >Cadastro
+            </Button>
           </Box>
         </Box>
       </Container>

@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Tabela from '../Tabela';
 import { lightGreen } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
-import ParticlesBg from 'particles-bg'
+import ParticlesBg from 'particles-bg' 
 
 const theme = createTheme({
   palette: {

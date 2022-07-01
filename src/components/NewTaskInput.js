@@ -24,18 +24,18 @@ const NewTaskInput = ({ onSubmit }) => {
 
   return (
     <ThemeProvider theme={theme}>
-    <Box>
-      <form onSubmit={submit}>
-        <input
-          type={"datetime-local"}
-          className="Todo-input"
-          onChange={setNewTask}
-        /> 
-        <Button type="submit" variant="contained" size='small'>
-          Adicionar
-        </Button>
-      </form>
-    </Box>
+      <Box>
+        <form onSubmit={submit}>
+          <input
+            type={"datetime-local"}
+            className="Todo-input"
+            onChange={setNewTask}
+          /> 
+          <Button type="submit" variant="contained" size='small'>
+            Adicionar
+          </Button>
+        </form>
+      </Box>
     </ThemeProvider>)
 };
 
