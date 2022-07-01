@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Tabela from './Tabela';
+import Tabela from '../Tabela';
 import { lightGreen } from '@mui/material/colors';
 import { grey } from '@mui/material/colors';
 import ParticlesBg from 'particles-bg'

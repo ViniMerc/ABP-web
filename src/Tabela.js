@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -18,7 +18,10 @@ import Paper from '@mui/material/Paper';
 import { blue } from '@mui/material/colors';
 import { lightGreen } from '@mui/material/colors';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Home from './Home'
+import Home from './pages/Home'
+//Tabela add e exc
+import ListItem from './components/ListItem'
+import NewTaskInput from './components/NewTaskInput'
 
 const theme = createTheme({
   palette: {
@@ -35,6 +38,26 @@ function createData(name, entrada, deletar) {
   ];
 
 export default function SignIn() {
+  const [tasks, setTasks] = useState([]);
+
+  function addNewTask(task) {
+    const itensCopy = Array.from(tasks);
+    itensCopy.push({id: tasks.length, value: task});
+    setTasks(itensCopy);
+  }
+
+  function updateTask({target}, index) {
+    const itensCopy = Array.from(tasks);
+    itensCopy.splice(index, 1, { id: index, value: target.value });
+    setTasks(itensCopy);
+  }
+
+  function deleteTask(index) {
+    const itensCopy = Array.from(tasks);
+    itensCopy.splice(index, 1);
+    setTasks(itensCopy);
+  }
+  
   const[visivel, setVisivel] = React.useState(true);
   return (<>
     {!visivel && <Home/>}
@@ -55,31 +78,20 @@ export default function SignIn() {
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             V
           </Avatar>
-          <TableContainer component={Paper}>       
-            <Table sx={{ minWidth: 150 }} size="small" aria-label="a dense table">
-              <TableHead>
-                 <TableRow>
-                   <TableCell>Nome</TableCell>
-                   <TableCell align="left">Entrada</TableCell>
-                   <TableCell>Deletar</TableCell>
-                 </TableRow>
-              </TableHead>
-              <TableBody>
-                  {rows.map((row) => (
-                    <TableRow
-                      key={row.name}
-                      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                      <TableCell component="th" scope="row">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="left">{row.entrada}</TableCell>
-                      <TableCell align="left">{row.deletar}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-          </TableContainer>
+
+          <Box bgcolor= "#f1f1f1" boxShadow={0} component={Paper} className="App-header" >
+          <NewTaskInput onSubmit={addNewTask} />
+
+          {tasks.map(({id, value}, index) => (
+          <ListItem
+            key={id}
+            value={value}
+            onChange={(event) => updateTask(event, index)}
+            onDelete={() => deleteTask(index)}
+          />
+          ))}
+          </Box>
+        
           <Box component="form" noValidate sx={{ mt: 1 }}>              
             <Button
               type="submit"
@@ -97,6 +109,8 @@ export default function SignIn() {
               onClick={() => {setVisivel(x => !x)}}> Voltar para página inicial </Button>
           </Box>
         </Box>
+
+
       </Container>
     </ThemeProvider>
   }</>);
